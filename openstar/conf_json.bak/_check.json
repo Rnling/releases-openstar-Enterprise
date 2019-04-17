@@ -1,0 +1,155 @@
+{
+    "base":{
+        "redis_Mod":{
+            "state":["check_str",["on|off","jo"]],
+            "ip":["check_ip"],
+            "Port":["check_str",["\\d","jo"]],
+            "Password":["check_str",["*",""]]
+        },
+        "autoSync":{
+            "state":["check_str",["Master|Slave|off","jo"]],
+            "timeAt":["check_str",["\\d","jo"]]
+        },
+        "Mod_state":["check_str",["on|off","jo"]],
+        "ngx_status":["check_str",["on|off","jo"]],
+        "realIpFrom_Mod":["check_str",["on|off","jo"]],
+        "ip_Mod":["check_str",["on|off","jo"]],
+        "host_method_Mod":["check_str",["on|off","jo"]],
+        "rewrite_Mod":["check_str",["on|off","jo"]],
+        "app_Mod":["check_str",["on|off","jo"]],
+        "referer_Mod":["check_str",["on|off","jo"]],
+        "uri_Mod":["check_str",["on|off","jo"]],
+        "header_Mod":["check_str",["on|off","jo"]],
+        "useragent_Mod":["check_str",["on|off","jo"]],
+        "cookie_Mod":["check_str",["on|off","jo"]],
+        "args_Mod":["check_str",["on|off","jo"]],
+        "post_Mod":["check_str",["on|off","jo"]],
+        "network_Mod":["check_str",["on|off","jo"]],
+        "replace_Mod":["check_str",["on|off","jo"]],
+        "debug_Mod":["check_str",["true|false","jo"]],
+        "baseDir":["check_str",["*",""]],
+        "logPath":["check_str",["*",""]],
+        "jsonPath":["check_str",["*",""]],
+        "htmlPath":["check_str",["*",""]],
+        "ngxconfDir":["check_str",["*",""]],
+        "denyMsg":{
+            "state":["check_str",["on|off","jo"]],
+            "msg":["check_str",["(\\d|*)","jo"]],
+        },
+        "log_onLocal":{
+            "state":["check_str",["on|off","jo"]],
+            "path":["check_str",["*","jo"]],
+            "format_tb":["check_type",["table"]],
+            "tb_concat":["check_str",["*",""]]
+        },
+        "log_onRemote":{
+            "state":["check_str",["on|off","jo"]],
+            "worker_sleep_time":["check_str",["\\d","jo"]],
+            "worker_deal_limit":["check_str",["\\d","jo"]],
+            "socketType":["check_str",["*",""]],
+            "sendBufferSize":["check_str",["\\d","jo"]],
+            "host":["check_ip"],
+            "port":["check_str",["\\d","jo"]],
+            "tb_concat":["check_str",["*",""]],
+            "format_tb":["check_type",["table"]]
+        }
+    },
+
+    "host_Mod":"nil",
+
+    "app_Mod":"nil",
+
+    "args_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "hostname":["check_remath"],
+        "args":["check_remath"],
+        "action":["check_str",["allow|deny|log","jo"]],
+        },
+
+    "cookie_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "hostname":["check_remath"],
+        "cookie":["check_remath"],
+        "action":["check_str",["allow|deny|log","jo"]],
+        },
+
+    "denyMsg":"nil",
+
+    "header_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "hostname":["check_remath"],
+        "header":["check_remath"],
+        "action":["check_str",["allow|deny|log","jo"]],
+        },
+
+    "host_method_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "method":["check_remath"],
+        "hostname":["check_remath"]
+        },
+
+    "ip_Mod":{
+        "ip":["check_ip"],
+        "action":["check_str",["allow|deny|log","jo"]],
+        },
+
+    "network_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "hostname":["check_remath"],
+        "uri":["check_remath"]
+        },
+
+    "post_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "hostname":["check_remath"],
+        "post":["check_remath"],
+        "action":["check_str",["allow|deny|log","jo"]],
+        },
+
+    "realIpFrom_Mod":"nil",
+
+    "referer_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "uri":["check_remath"],
+        "hostname":["check_remath"],
+        "referer":["check_remath"],
+        "action":["check_str",["allow|deny|log|next","jo"]],
+        },
+
+    "replace_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "uri":["check_remath"],
+        "hostname":["check_remath"],
+        "replace_list":["check_type",["table"]],
+        },
+
+    "rewrite_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "uri":["check_remath"],
+        "hostname":["check_remath"]
+        },
+
+    "uri_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "uri":["check_remath"],
+        "hostname":["check_remath"],
+        "action":["check_str",["allow|deny|log","jo"]],
+        },
+
+    "useragent_Mod":{
+        "state":["check_str",["on|off","jo"]],
+        "id":["check_str",["*",""]],
+        "useragent":["check_remath"],
+        "hostname":["check_remath"]
+        }
+}

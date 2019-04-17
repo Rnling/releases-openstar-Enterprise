@@ -1,0 +1,16 @@
+[
+    {
+        "state": "on",
+        "id":"1-hostTest_cc",
+        "network":{"maxReqs":30,"pTime":10,"blackTime":600},
+        "hostname": [["101.200.122.200","localhost"],"list"],
+        "uri": ["/api/time",""]
+    },
+    {
+        "state": "on",
+        "id":"2-Test_cc",
+        "network":{"maxReqs":1000,"pTime":10,"blackTime":120},
+        "hostname": ["*",""],
+        "uri": ["*",""]
+    }
+]

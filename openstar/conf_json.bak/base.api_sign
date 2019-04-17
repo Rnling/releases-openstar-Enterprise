@@ -1,0 +1,33 @@
+base.json
+
+md5:
+"api_sign":{
+        "state":"off",
+        "checkMaster": "off",
+        "authority":{
+            "header_name":"sign",
+            "alg":"MD5",
+            "key":"asdffffff9asdfjkasdfjkasdf",
+            "format_tb":[
+                    "$uri",
+                    "$http_time",
+                    "fuckyousign"
+                ]
+        }
+    }
+
+HS256, HS512, RS256
+"api_sign":{
+        "state":"off",
+        "checkMaster": "off",
+        "authority":{
+            "header_name":"sign",
+            "alg":"HS256",
+            "key":"jd9239jkdf9u23oirjkleJHfn3ui209tn",
+            "format_tb":[
+                "$uri",
+                "$http_time",
+                "fuckyousign"
+            ]
+        }
+    }

@@ -1,0 +1,28 @@
+
+[
+    {
+        "state": "on",
+        "id":"1-AWVS_Scan",
+        "action":"deny",
+        "uri": ["*",""],
+        "hostname": ["*",""],
+        "header": ["*","",["Acunetix_Aspect"]]
+    },
+    {
+        "state": "on",
+        "id":"2-X_Scan",
+        "action":"log",
+        "uri": ["*",""],
+        "hostname": ["*",""],
+        "header": ["*","",["X_Scan_Memo","any"]]
+    },
+    {
+        "state": "off",
+        "id":"3-test",
+        "action":"deny",
+        "uri": ["*","",false],
+        "hostname": ["*","",false],
+        "header": ["*","",["fuck","end"],true]
+    }
+
+]
